@@ -1,58 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Design Collection - Velcora Designs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velcora Designs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Blacksword&display=swap" rel="stylesheet">
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
     body {
+      margin: 0;
+      font-family: 'Blacksword', cursive;
       background-color: #0e0e0e;
       color: #f5f5f5;
-      font-family: 'Rock Salt', cursive;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
       padding: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      max-width: 200px;
+      margin-bottom: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
     }
     h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
       color: #d4af37;
+      animation: fadeIn 1.5s ease-in-out;
     }
-    .grid {
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .cta {
+      background-color: #d4af37;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      margin: 0.5rem;
+    }
+    .cta:hover {
+      background-color: #b8912e;
+      transform: scale(1.05);
+    }
+    .recent-designs {
+      margin-top: 2rem;
+    }
+    .recent-designs h2 {
+      color: #d4af37;
+      font-size: 2rem;
+    }
+    .design-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
+      animation: fadeIn 2.5s ease-in-out;
     }
-    .item {
+    .design-card {
       background: #1a1a1a;
+      border: 1px solid #333;
       padding: 1rem;
       border-radius: 10px;
       width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .item img {
+    .design-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+    }
+    .design-card img {
       width: 100%;
       border-radius: 5px;
     }
-    a {
-      color: #d4af37;
-      text-decoration: none;
+    .design-card p {
+      margin-top: 0.5rem;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #999;
+      animation: fadeIn 3s ease-in-out;
     }
   </style>
 </head>
 <body>
-  <h1>Our Full Collection</h1>
-  <div class="grid">
-    <div class="item">
-      <img src="design1.png" alt="Design 1">
-      <p>Urban Classic Tee</p>
+  <img src="v3.png" alt="Velcora Logo" class="logo">
+  <h1>Velcora Designs</h1>
+  <p>Premium streetwear built for the bold. Designed for teens. Crafted with quality. Unmatched vibe.</p>
+  <a href="about.html" class="cta">About Us</a>
+  <a href="collection.html" class="cta">Design Collection</a>
+  <a href="https://instagram.com/velcoradesigns" class="cta" target="_blank">Follow Us</a>
+
+  <section class="recent-designs">
+    <h2>Recently Launched</h2>
+    <div class="design-grid">
+      <div class="design-card">
+        <img src="design1.png" alt="Design 1">
+        <p>Urban Classic Tee</p>
+      </div>
+      <div class="design-card">
+        <img src="design2.png" alt="Design 2">
+        <p>Graffiti Drop Hoodie</p>
+      </div>
+      <div class="design-card">
+        <img src="design3.png" alt="Design 3">
+        <p>Bold Vibes Jacket</p>
+      </div>
     </div>
-    <div class="item">
-      <img src="design2.png" alt="Design 2">
-      <p>Graffiti Drop Hoodie</p>
-    </div>
-    <div class="item">
-      <img src="design3.png" alt="Design 3">
-      <p>Bold Vibes Jacket</p>
-    </div>
-  </div>
-  <p><a href="index.html">Back to Home</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Velcora Designs. All rights reserved.
+  </footer>
 </body>
 </html>
+
