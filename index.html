@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Velcora Designs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Blacksword&display=swap" rel="stylesheet">
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      font-family: 'Rock Salt', cursive;
+      font-family: 'Blacksword', cursive;
       background-color: #0e0e0e;
       color: #f5f5f5;
       text-align: center;
@@ -18,10 +21,16 @@
       justify-content: start;
       min-height: 100vh;
       padding: 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .logo {
       max-width: 200px;
       margin-bottom: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
     }
     h1 {
       font-size: 2.5rem;
@@ -32,6 +41,7 @@
       font-size: 1.1rem;
       max-width: 600px;
       margin: 0 auto 1.5rem;
+      animation: fadeIn 2s ease-in-out;
     }
     .cta {
       background-color: #d4af37;
@@ -40,12 +50,13 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
       display: inline-block;
       margin: 0.5rem;
     }
     .cta:hover {
       background-color: #b8912e;
+      transform: scale(1.05);
     }
     .recent-designs {
       margin-top: 2rem;
@@ -59,6 +70,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
+      animation: fadeIn 2.5s ease-in-out;
     }
     .design-card {
       background: #1a1a1a;
@@ -66,6 +78,11 @@
       padding: 1rem;
       border-radius: 10px;
       width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .design-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
     }
     .design-card img {
       width: 100%;
@@ -78,6 +95,7 @@
       margin-top: 2rem;
       font-size: 0.9rem;
       color: #999;
+      animation: fadeIn 3s ease-in-out;
     }
   </style>
 </head>
@@ -112,3 +130,4 @@
   </footer>
 </body>
 </html>
+
