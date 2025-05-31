@@ -2,134 +2,235 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Velcora Designs</title>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Velcora Collection</title>
   <link href="https://fonts.googleapis.com/css2?family=Blacksword&display=swap" rel="stylesheet">
   <style>
     * {
+      box-sizing: border-box;
       scroll-behavior: smooth;
     }
     body {
       margin: 0;
       font-family: 'Blacksword', cursive;
-      background-color: #0e0e0e;
+      background-color: #0f0f0f;
       color: #f5f5f5;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      min-height: 100vh;
       padding: 2rem;
-      animation: fadeIn 1s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .logo {
-      max-width: 200px;
-      margin-bottom: 1rem;
-      animation: fadeIn 1.5s ease-in-out;
     }
     h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
+      text-align: center;
+      font-size: 3rem;
       color: #d4af37;
-      animation: fadeIn 1.5s ease-in-out;
+      margin-bottom: 2rem;
     }
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-      animation: fadeIn 2s ease-in-out;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
-    .cta {
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #2b2b2b;
+      border-radius: 15px;
+      overflow: hidden;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin: 0.7rem 0 0.3rem;
+      color: #d4af37;
+      font-size: 1.5rem;
+    }
+    .card p {
+      font-size: 1rem;
+      margin: 0.2rem 0;
+    }
+    .load-more {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.8rem 2rem;
       background-color: #d4af37;
       color: #000;
-      padding: 0.8rem 1.5rem;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
       font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      display: inline-block;
-      margin: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
-    .cta:hover {
+    .load-more:hover {
       background-color: #b8912e;
-      transform: scale(1.05);
     }
-    .recent-designs {
-      margin-top: 2rem;
+    .reviews {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #333;
+      text-align: center;
     }
-    .recent-designs h2 {
-      color: #d4af37;
+    .reviews h2 {
       font-size: 2rem;
+      color: #d4af37;
+      margin-bottom: 1rem;
     }
-    .design-grid {
+    .review-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      animation: fadeIn 2.5s ease-in-out;
+      gap: 1.5rem;
     }
-    .design-card {
-      background: #1a1a1a;
-      border: 1px solid #333;
+    .review {
+      background: #1e1e1e;
       padding: 1rem;
       border-radius: 10px;
-      width: 250px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 300px;
     }
-    .design-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
-    }
-    .design-card img {
+    .review img {
       width: 100%;
-      border-radius: 5px;
-    }
-    .design-card p {
-      margin-top: 0.5rem;
-    }
-    footer {
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #999;
-      animation: fadeIn 3s ease-in-out;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <img src="v3.png" alt="Velcora Logo" class="logo">
-  <h1>Velcora Designs</h1>
-  <p>Premium streetwear built for the bold. Designed for teens. Crafted with quality. Unmatched vibe.</p>
-  <a href="about.html" class="cta">About Us</a>
-  <a href="collection.html" class="cta">Design Collection</a>
-  <a href="https://instagram.com/velcoradesigns" class="cta" target="_blank">Follow Us</a>
 
-  <section class="Our Collection:">
-    <h2>Recently Launched</h2>
-    <div class="design-grid">
-      <div class="design-card">
-        <img src="Dark secrets front print.png" alt="Design 1">
-        <p>Dark Secrets Tee</p>
-      </div>
-      <div class="design-card">
-        <img src="futuristic shirt front.png" alt="Design 2">
-        <p>Futuristic Shirt</p>
-      </div>
-      <div class="design-card">
-        <img src="rose tshirt design.png" alt="Design 3">
-        <p>Rose Design shirt</p>
-      </div>
+  <h1>Our Streetwear Collection</h1>
+
+  <div class="grid" id="productGrid">
+    <!-- Initial 10 Products -->
+    <div class="card">
+      <a href="urban-classic-tee.html"><img src="design1.png" alt="Urban Classic Tee"></a>
+      <h3>Urban Classic Tee</h3>
+      <p>Material: 100% Organic Cotton</p>
+      <p>Soft, breathable, and durable for all-day wear.</p>
     </div>
-  </section>
+    <div class="card">
+      <img src="design2.png" alt="Graffiti Drop Hoodie">
+      <h3>Graffiti Drop Hoodie</h3>
+      <p>Material: Premium Fleece</p>
+      <p>Designed for warmth and style in any season.</p>
+    </div>
+    <div class="card">
+      <img src="design3.png" alt="Bold Vibes Jacket">
+      <h3>Bold Vibes Jacket</h3>
+      <p>Material: Nylon & Cotton Blend</p>
+      <p>Water-resistant with a sleek silhouette.</p>
+    </div>
+    <div class="card">
+      <img src="design4.png" alt="Street Zen Tee">
+      <h3>Street Zen Tee</h3>
+      <p>Material: Bamboo Cotton</p>
+      <p>Eco-friendly with buttery-soft texture.</p>
+    </div>
+    <div class="card">
+      <img src="design5.png" alt="Noir Nights Hoodie">
+      <h3>Noir Nights Hoodie</h3>
+      <p>Material: Brushed Cotton Fleece</p>
+      <p>Luxury meets comfort in our midnight edition.</p>
+    </div>
+    <div class="card">
+      <img src="design6.png" alt="Skyburst Tee">
+      <h3>Skyburst Tee</h3>
+      <p>Material: Tri-blend Cotton</p>
+      <p>Lightweight and vibrant for summer fits.</p>
+    </div>
+    <div class="card">
+      <img src="design7.png" alt="Monochrome Mesh Top">
+      <h3>Monochrome Mesh Top</h3>
+      <p>Material: Cotton & Mesh</p>
+      <p>For the streets and the spotlight.</p>
+    </div>
+    <div class="card">
+      <img src="design8.png" alt="Velcora Drip Hoodie">
+      <h3>Velcora Drip Hoodie</h3>
+      <p>Material: Terry Fleece</p>
+      <p>Iconic branding. Maximum impact.</p>
+    </div>
+    <div class="card">
+      <img src="design9.png" alt="Core Fit Tee">
+      <h3>Core Fit Tee</h3>
+      <p>Material: Stretch Cotton</p>
+      <p>Contours to your lifestyle.</p>
+    </div>
+    <div class="card">
+      <img src="design10.png" alt="Pulse Patch Jacket">
+      <h3>Pulse Patch Jacket</h3>
+      <p>Material: Denim & Faux Leather</p>
+      <p>Fusion of rugged and refined.</p>
+    </div>
+  </div>
 
-  <footer>
-    &copy; 2025 Velcora Designs. All rights reserved.
-  </footer>
+  <button class="load-more" onclick="loadMore()">Load More</button>
+
+  <!-- Reviews Section -->
+  <div class="reviews">
+    <h2>What People Are Saying</h2>
+    <div class="review-grid">
+      <div class="review">
+        <img src="review1.png" alt="Review Screenshot 1">
+      </div>
+      <div class="review">
+        <img src="review2.png" alt="Review Screenshot 2">
+      </div>
+      <!-- Add more screenshots here -->
+    </div>
+  </div>
+
+  <script>
+    const moreProducts = [
+      {
+        img: "design11.png",
+        name: "Shadow Realm Tee",
+        material: "Cotton-Elastane",
+        desc: "Stretchy and shadowy for edgy fits."
+      },
+      {
+        img: "design12.png",
+        name: "Neon Vibe Hoodie",
+        material: "Glow Thread Cotton",
+        desc: "Turns heads with glowing vibes."
+      },
+      {
+        img: "design13.png",
+        name: "Street Samurai Jacket",
+        material: "Armour Blend",
+        desc: "Inspired by tradition, tailored for today."
+      },
+      {
+        img: "design14.png",
+        name: "Chrome Core Tee",
+        material: "Reflective Cotton",
+        desc: "Shimmers with every flash."
+      },
+      {
+        img: "design15.png",
+        name: "Velcora OG Hoodie",
+        material: "Luxury Cotton",
+        desc: "The original. The legend. The Velcora OG."
+      },
+    ];
+
+    function loadMore() {
+      const grid = document.getElementById("productGrid");
+      moreProducts.forEach(product => {
+        const div = document.createElement("div");
+        div.classList.add("card");
+        div.innerHTML = `
+          <img src="${product.img}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>Material: ${product.material}</p>
+          <p>${product.desc}</p>
+        `;
+        grid.appendChild(div);
+      });
+      document.querySelector(".load-more").style.display = "none";
+    }
+  </script>
 </body>
 </html>
-
